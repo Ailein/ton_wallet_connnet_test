@@ -1,7 +1,7 @@
 import {Account, CHAIN, TonProofItemReplySuccess} from "@tonconnect/ui-react";
 
 export class BackendApi {
-     baseUrl = 'https://chop-api.jpegonapechain.meme/';
+     baseUrl = 'https://chop-api.jpegonapechain.meme';
 //   baseUrl = 'http://localhost:3000';
 
     async generatePayload(): Promise<string | undefined> {
