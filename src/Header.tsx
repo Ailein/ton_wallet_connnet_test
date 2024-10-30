@@ -8,13 +8,13 @@ export const Header = () => {
             wallet ? <>
                 {
                     'name' in wallet ? <div>
-                        <div>Кошелек: {wallet.name}</div>
-                        <div>Адрес: {toUserFriendlyAddress(wallet.account.address, wallet.account.chain === CHAIN.TESTNET)}</div>
+                        <div>钱包: {wallet.name}</div>
+                        <div>地址: {toUserFriendlyAddress(wallet.account.address, wallet.account.chain === CHAIN.TESTNET)}</div>
                         <img src={wallet.imageUrl} height="50px" width="50px" />
 
-                    </div> : `Подключен неизвестный кошелек ${wallet.device.appName}`
+                    </div> : `已连接未知钱包 ${wallet.device.appName}`
                 }
-            </> : 'Кошелек не подключен'
+            </> : '钱包未连接'
         }
         <TonConnectButton />
     </div>

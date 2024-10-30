@@ -22,10 +22,10 @@ export const Settings = () => {
 
     return <div>
         Settings
-        <select value={lang} onChange={e => setLang(e.target.value)}>
+        {/* <select value={lang} onChange={e => setLang(e.target.value)}>
             <option value="ru">ru</option>
             <option value="en">en</option>
-        </select>
+        </select> */}
 
         <select value={theme} onChange={e => setTheme(e.target.value as THEME)}>
             <option value={THEME.DARK}>DARK</option>

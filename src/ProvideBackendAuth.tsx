@@ -61,6 +61,8 @@ export const ProvideBackendAuth = () => {
             return;
         }
 
+        console.log('sss',wallet);
+        
         if (wallet.connectItems?.tonProof && !('error' in wallet.connectItems.tonProof)) {
             backendApi.checkProof(wallet.account, wallet.connectItems.tonProof.proof).then(t => {
                 if (t) {

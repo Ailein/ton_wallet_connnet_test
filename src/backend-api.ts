@@ -1,12 +1,12 @@
 import {Account, CHAIN, TonProofItemReplySuccess} from "@tonconnect/ui-react";
 
 export class BackendApi {
-     baseUrl = 'https://demo.tonconnect.dev';
-  // baseUrl = 'http://localhost:3000';
+    //  baseUrl = 'https://demo.tonconnect.dev';
+  baseUrl = 'http://localhost:3000';
 
     async generatePayload(): Promise<string | undefined> {
         try {
-            const response = await (await fetch(`${this.baseUrl}/ton-proof/generatePayload`, {
+            const response = await (await fetch(`${this.baseUrl}/ton-proof/generate-payload`, {
                 method: 'POST'
             })).json();
 
@@ -22,13 +22,14 @@ export class BackendApi {
             const body = {
                 address: account.address,
                 network: account.chain,
+                public_key: account.publicKey,
                 proof: {
                     ...proof,
                     state_init: account.walletStateInit
                 }
             }
 
-            const response = await (await fetch(`${this.baseUrl}/ton-proof/checkProof`, {
+            const response = await (await fetch(`${this.baseUrl}/ton-proof/check-proof`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -47,7 +48,7 @@ export class BackendApi {
 
     async getAccountInfo(authToken: string, network: CHAIN) {
         try {
-            const response = await (await fetch(`${this.baseUrl}/dapp/getAccountInfo?network=${network}`, {
+            const response = await (await fetch(`${this.baseUrl}/dapp/get-account-info?network=${network}`, {
                 headers: {
                     'Authorization': `Bearer ${authToken}`
                 }
