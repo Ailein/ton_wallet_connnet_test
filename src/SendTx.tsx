@@ -37,7 +37,7 @@ export const SendTx = () => {
             .storeUint(0x0f8a7ea5, 32)
             .storeUint(0, 64)
             .storeCoins(1)
-            .storeAddress(Address.parse('UQCA6d29vC2UHcjWIzXt5fOr1W83PqqFZEc6C4K77QnwkcAj'))
+            .storeAddress(Address.parse('UQAkpjcZ1eBUzl2cj6uPnXM5AooluoRPg31Qr2jjaADUZnI5'))
             .storeAddress(null)
             .storeMaybeRef()
             .storeCoins(0)
