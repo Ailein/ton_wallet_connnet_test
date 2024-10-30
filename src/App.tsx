@@ -6,8 +6,16 @@ import {BackendTokenContext} from "./BackendTokenContext.ts";
 import {useState} from "react";
 import {ProvideBackendAuth} from "./ProvideBackendAuth.tsx";
 import {OnlyAuthUserData} from "./OnlyAuthUserData.tsx";
+import WebApp from '@twa-dev/sdk'
+
+
+// WebApp.showAlert('Hey there!');
+
+// WebApp.showAlert(JSON.stringify(WebApp.initData));
+
 
 function App() {
+
   const [token, setToken] = useState<string | undefined>(undefined);
 
   return <TonConnectUIProvider
@@ -38,6 +46,11 @@ function App() {
           <SendTx />
           <Settings />
           <OnlyAuthUserData />
+          {/* 显示 WebApp.initData 内容 */}
+        <div>
+          <h2>WebApp Init Data:</h2>
+          <p>{JSON.stringify(WebApp.initData)}</p>
+        </div>
       </BackendTokenContext.Provider>
   </TonConnectUIProvider>
 }
