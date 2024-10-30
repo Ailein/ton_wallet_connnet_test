@@ -10,4 +10,5 @@ export default defineConfig({
       include: ['buffer']
     })
   ],
+  base: '/ton_wallet_connnet_test/',
 })
