@@ -11,7 +11,7 @@ function App() {
   const [token, setToken] = useState<string | undefined>(undefined);
 
   return <TonConnectUIProvider
-      manifestUrl="https://ton-connect.github.io/demo-dapp-with-react-ui/tonconnect-manifest.json"
+      manifestUrl="https://ailein.github.io/ton_wallet_connnet_test/tonconnect-manifest.json"
       uiPreferences={{
         borderRadius: 'none',
         colorsSet: {
