@@ -1,0 +1,96 @@
+/* Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  padding: 20px;
+  height: 100vh;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.notification.success {
+  background-color: #4caf50;
+}
+
+.notification.error {
+  background-color: #f44336;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-panel {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.user-info {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.user-info h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.user-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-buttons button:hover {
+  background-color: #0056b3;
+}
