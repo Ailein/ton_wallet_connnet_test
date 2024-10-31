@@ -1,6 +1,6 @@
 // App.tsx
 
-import React, { useEffect, useState, useContext } from "react";
+import  { useEffect, useState, useContext } from "react";
 import { BackendTokenContext } from "./BackendTokenContext";
 import Login from "./Login";
 
