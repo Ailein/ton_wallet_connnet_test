@@ -12,10 +12,16 @@ function Login() {
   const [balance, setBalance] = useState<number | null>(null); // 用于存储余额
   const [isLoggedIn, setIsLoggedIn] = useState(false); // 判断是否已登录
   const [userInfo, setUserInfo] = useState<any>(null); // 存储用户信息
+
+  const [initDataTest, setinitDataTest] = useState<any>(null); // 存储用户信息
+
   const [notification, setNotification] = useState<{ message: string; type: string } | null>(null); // 用于消息提示
 
   const handleLogin = async () => {
     const initData = WebApp.initData;
+
+    setinitDataTest(initData);
+
      // "user=%7B%22id%22%3A5160149730%2C%22first_name%22%3A%22Zo%22%2C%22last_name%22%3A%22YonLian%22%2C%22username%22%3A%22Zoyonlian%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-4974430574441768306&chat_type=sender&auth_date=1730357460&hash=80bac0b64bb2262b99f8aac7dfd00b005338dc0981a907ce3da44dbd031cc84a"; // Your initData here
 
     try {
@@ -113,6 +119,7 @@ function Login() {
       
       {!isLoggedIn ? (
         <div className="login-panel">
+         <h2>欢迎, {initDataTest}</h2>
           <button className="login-button" onClick={handleLogin}>登录</button>
         </div>
       ) : (
