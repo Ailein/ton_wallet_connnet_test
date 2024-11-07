@@ -20,7 +20,7 @@ function Login() {
   const handleLogin = async () => {
     const initData = WebApp.initData;
 
-    setinitDataTest(initData);
+    setinitDataTest(JSON.stringify(initData));
 
      // "user=%7B%22id%22%3A5160149730%2C%22first_name%22%3A%22Zo%22%2C%22last_name%22%3A%22YonLian%22%2C%22username%22%3A%22Zoyonlian%22%2C%22language_code%22%3A%22zh-hans%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-4974430574441768306&chat_type=sender&auth_date=1730357460&hash=80bac0b64bb2262b99f8aac7dfd00b005338dc0981a907ce3da44dbd031cc84a"; // Your initData here
 
