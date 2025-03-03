@@ -2,7 +2,7 @@ import {Account, CHAIN, TonProofItemReplySuccess} from "@tonconnect/ui-react";
 
 export class BackendApi {
     //  baseUrl = 'https://demo.tonconnect.dev';
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'https://wolf.jpegonapechain.com/api';
 
     async generatePayload(): Promise<string | undefined> {
         try {
@@ -29,7 +29,7 @@ export class BackendApi {
                 }
             }
 
-            const response = await (await fetch(`${this.baseUrl}/ton-proof/check-proof`, {
+            const response = await (await fetch(`${this.baseUrl}/ton-proof/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
